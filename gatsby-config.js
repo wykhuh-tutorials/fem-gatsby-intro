@@ -5,6 +5,15 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-emotion',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-mdx',
+      options: {
+        // load all mdx files into the layout template
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js')
+        }
+      }
+    }
   ],
 }
