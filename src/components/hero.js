@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
 //  background-size: cover; make image width same as container width
-const ImageBackground = styled('div')`
-  background-image: url('/images/sterling-davis-la.jpg');
+const ImageBackground = styled(BackgroundImage)`
   background-position: top 40% center;
   background-size: cover;
   height: 50vh;
@@ -42,8 +42,20 @@ const TextBox = styled('div')`
 `;
 
 const Hero = () => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "sterling-davis-la.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <ImageBackground>
+    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
       <TextBox>
         <h1>Gatsby Workshop</h1>
         <p>Hello <Link to="/about">Learn more</Link></p>
