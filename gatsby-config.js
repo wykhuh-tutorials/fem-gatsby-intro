@@ -14,7 +14,8 @@ module.exports = {
         // load all mdx files into the layout template
         defaultLayouts: {
           default: require.resolve('./src/components/layout.js')
-        }
+        },
+        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
       }
     },
     {
