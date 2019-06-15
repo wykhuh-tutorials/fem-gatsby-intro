@@ -33,7 +33,7 @@ const usePosts = () => {
     slug: post.frontmatter.slug,
     excerpt: post.excerpt,
     image: post.frontmatter.image,
-  }))
-}
+  }));
+};
 
 export default usePosts;

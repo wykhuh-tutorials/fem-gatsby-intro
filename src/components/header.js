@@ -33,7 +33,9 @@ const Header = () => (
       padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
     `}
   >
-    <NavLink to="/" fontWeight="bold">Workshop</NavLink>
+    <NavLink to="/" fontWeight="bold">
+      Workshop
+    </NavLink>
     <nav
       css={css`
         margin-top: 0;
@@ -47,6 +49,6 @@ const Header = () => (
       </NavLink>
     </nav>
   </header>
-)
+);
 
 export default Header;

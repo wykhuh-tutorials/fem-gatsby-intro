@@ -52,16 +52,18 @@ const Hero = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
       <TextBox>
         <h1>Gatsby Workshop</h1>
-        <p>Hello <Link to="/about">Learn more</Link></p>
+        <p>
+          Hello <Link to="/about">Learn more</Link>
+        </p>
       </TextBox>
     </ImageBackground>
-  )
-}
+  );
+};
 
 export default Hero;

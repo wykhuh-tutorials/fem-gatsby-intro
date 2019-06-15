@@ -8,4 +8,4 @@ export default () => (
     <p>This is my site</p>
     <Link to="/">home</Link>
   </Layout>
-)
+);
