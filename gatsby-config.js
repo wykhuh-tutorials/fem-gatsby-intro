@@ -38,5 +38,16 @@ module.exports = {
         username: 'gatsbyjs'
       }
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        // run on production bundle
+        production: true,
+        // only run if envar is set
+        disable: !process.env.ANALYZE_BUNDLE_SIZE,
+        generateStatsFile: true,
+        analyzerMode: 'static',
+      }
+    }
   ],
 }
