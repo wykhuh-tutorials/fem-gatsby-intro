@@ -8,7 +8,9 @@
   Frontend Masters: Introduction to Gatsby
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/de73d7cf-4ee4-4360-a575-7e660adbb6ea/deploy-status)](https://app.netlify.com/sites/wykhuh-fem-gatsby-intro/deploys)
 
+[demo app](https://wykhuh-fem-gatsby-intro.netlify.com)
 
 ## Installation Instructions
 
